@@ -1,0 +1,173 @@
+h1, p, form, label, select, button {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+.container{
+    margin: 0;
+    padding: 0;
+    background-image: url('/../../assets/images/logo2.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #070707; /* Text color for the entire page */
+    background-color: #333; /* Header background color */
+    font-family: Arial, sans-serif;
+    height:1000px;
+  }
+  .image1{
+    background-image: url('/../../assets/images/MfName.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+    
+
+}
+.image2{
+    background-image: url('/../../assets/images/weightage.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+}
+
+.image3{
+    background-image: url('/../../assets/images/money.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+}
+.bank-accounts {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 0%;
+    margin-right: 28%;
+    margin-left: 17%;
+    line-height:2;
+    font-size: 22px;  
+}
+  h1 {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .styled-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 3;
+    animation-duration: 1s;
+    animation-name: slidein;
+}
+.styled-form:hover{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transform: translateY(-10px);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    height: 40px;
+    width:50%;
+}
+
+option {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 5px;
+}
+
+/* Style hover and selected options */
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+  
+  #resultContainer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* .submit-button{
+    background-color: black;
+  } */
+
+  .header {
+    background-color:black;
+    color: #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5%;
+}
+
+/* Style the header text */
+  .header-text h1 {
+    text-align: center;
+    margin: 0; /* Remove default margin */
+}
+
+.one { 
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+    background-color: whitesmoke;
+    cursor: pointer; 
+    transition: transform 0.3s ease-in-out;
+    margin-left: 15%;
+    align-items: center;
+    opacity: 3;
+    height: 200px;
+    width: 500px;
+}
+.one form {
+    margin-right: 20%; 
+    font-size: 100%;
+    opacity: 0.9;  
+}
+.one:hover{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transform: translateY(-10px);
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+   

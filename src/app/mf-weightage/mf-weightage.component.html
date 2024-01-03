@@ -1,0 +1,46 @@
+<div class="container" id="container">
+ 
+    <div  class="header">
+    <h1>Stock Weightage</h1>
+    </div>
+  <form (ngSubmit)="onSubmit()" #WeightageForm="ngForm" class="styled-form">
+    <h2>Stock Weightage</h2>
+    <label for="mfid">Enter MutualFund Id:</label>
+    <select  id="mfid" name="mfid" [(ngModel)]="mfWeightage.mfid"  (change)="onMutualFundIdSelected()"  required >
+        <option [value]="mutualFund.mf_id"   *ngFor="let mutualFund of mutualFunds | async">{{ mutualFund.mf_id }}</option>
+        </select><br><br>
+    <!-- <input type="text" id="mfid" name="mfid" required><br><br> -->
+    <label for="stockname">Enter Name of the Share:</label>
+    <select  id="stockname" name="stockname" [(ngModel)]="mfWeightage.stockname"  required >
+        <option [value]="stock" *ngFor="let stock of stocks |async">{{ stock }}</option>
+        </select><br><br>
+    <!-- <input type="text" id="nameoftheshare" name="nameoftheshare" required><br><br> -->
+    <label for="weightage">Enter Weightage:</label>
+    <select id="expense-ratio" name="expense-ratio" [(ngModel)]="mfWeightage.weightage" required >
+        <option [value]="item" *ngFor="let item of numbers">{{ item }}</option>
+        </select><br><br>
+    <!-- <input type="text" id="weighatge" name="weightage" required><br><br> -->
+    
+    <button  type="submit">Submit</button>  </form>
+    
+    <div   style="padding: 10px;">
+        <div class="bank-accounts" > 
+            <form class="one" >
+                <div class="image1" id="image1"><br><br></div>
+                 <b>MutualFund Name:</b><div>{{mfname}}</div><br>
+            </form>
+            <form class="one" >
+                <div class="image2" id="image2"><br><br></div>
+                <b>Available Weightage:</b><div>{{weightage}}</div><br>
+            </form>
+            <form class="one" >
+                <div class="image3" id="image3"><br><br></div>
+                <b>Total Corpus:</b><div>{{total_corpus}}</div><br>
+            </form>
+    </div>
+
+ </div> 
+  <div id="resultContainer" class="hidden">
+    <h2 id="stockWeightage"></h2>
+  </div>
+</div>

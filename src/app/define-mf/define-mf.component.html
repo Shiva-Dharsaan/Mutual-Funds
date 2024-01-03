@@ -1,0 +1,68 @@
+<div class="container" id="container">
+<div class="header">
+    <div class="header-text">
+       <h1>    
+        MUTUAL FUND
+       </h1>
+        </div>
+    <a href="/home" class="home-icon" >&#8962;</a>
+</div>
+
+  <form  (ngSubmit)="onSubmit()" #MutualFundForm="ngForm">
+      <div class="input-container"> 
+      <label for="fund-name">Name of the Mutual Fund:</label>
+      <br>
+      <input type="text" id="fund-name" name="name_of_mf"  [(ngModel)]="mutualFund.name_of_mf"  required>
+    </div><br>
+    <div class="input-container">
+        <label for="entry-load">Entry Load for the Mutual Fund:</label>
+        <br>
+        <select id="entry-load" name="entry_load" [(ngModel)]="mutualFund.entry_load" style="width: 300px;height: 30px;" required >
+            <option [value]="item" *ngFor="let item of num">{{ item }}</option>
+            </select><br><br>
+      <!-- <label for="entry-load">Entry Load for the Mutual Fund:</label>
+      <br>
+      <input type="number" id="entry-load" name="entry_load"  [(ngModel)]="mutualFund.entry_load"  step="0.01" required> -->
+    </div><br>
+    <div class="container2" id="container2">
+    <div class="input-container">
+        <div class="input-container">
+            <label for="exit-load">Exit Load for the Mutual Fund:</label>
+      <br>
+            <select id="exit_load" name="exit_load" [(ngModel)]="mutualFund.exit_load" style="width: 300px;height: 35px;" required >
+                <option [value]="item" *ngFor="let item of num">{{ item }}</option>
+                </select><br><br>
+      
+      <!-- <input type="number" id="exit-load" name="exit_load" step="0.01"  [(ngModel)]="mutualFund.exit_load"  required> -->
+    </div><br>
+    <div class="input-container">
+      <label for="expense-ratio">Expense Ratio for the Mutual Fund:</label>
+      <br>
+      <select id="expense-ratio" name="expense-ratio" [(ngModel)]="mutualFund.expense_ratio" style="width: 300px;height: 35px;" required >
+        <option [value]="item" *ngFor="let item of num">{{ item }}</option>
+        </select><br><br>
+      <!-- <input type="number" id="expense-ratio" name="expense_ratio"  [(ngModel)]="mutualFund.expense_ratio" step="0.01" required> -->
+    </div><br>
+   
+</div>
+    <div class="input-container">
+      <label for="balance-cash">Balance Cash for the Mutual Fund:</label>
+      <br>
+      <input type="number" id="balance-cash" name="balance_cash"  [(ngModel)]="mutualFund.balance_cash" step="1" required><br><br></div>
+    <div class="input-container">
+      <label for="initial-nav">Initial NAV for the Mutual Fund:</label>
+      <br>
+      <input type="number" id="initial-nav" name="nav"  [(ngModel)]="mutualFund.nav" step="1" required>
+    </div><br>
+    <div class="input-container">
+      <label for="total-corpus">Total Corpus for the Mutual Fund:</label>
+      <br>
+      <input type="number" id="total-corpus" name="total_corpus"  [(ngModel)]="mutualFund.total_corpus" step="1" required>
+    </div><br>
+      <button class="submit-button" type="submit">Submit</button><br><br>
+      <button class="submit-button" >Go Back</button>
+
+    </div>
+  </form>
+  <!-- //<div class="container2" id="container2"></div> -->
+</div>

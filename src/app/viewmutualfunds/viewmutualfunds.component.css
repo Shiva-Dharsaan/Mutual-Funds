@@ -1,0 +1,131 @@
+.container{
+    background: linear-gradient(90deg,#007FFF,lightgreen); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #070707; /* Text color for the entire page */
+    /* background-color: #333; Header background color */
+    font-family: Arial, sans-serif;
+    height:3100px; 
+  }
+
+.one {
+    width: 400px; /* Adjust width as needed */
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: whitesmoke;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 15%;
+    align-items: center;
+    text-align: center;
+    opacity: 3;
+    height: 130px; /* Adjust height as needed */
+    width:50%;
+    margin-bottom: 20px;
+    animation-duration: 1s;
+    animation-name: slidein;
+  }
+  .one:hover{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transform: translateY(-10px);
+}
+  .header {
+    background-color:black;
+    color: #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    margin-bottom: 0; 
+}
+
+/* Style the header text */
+  .header-text h1 {
+    text-align: center;
+    margin: 0; /* Remove default margin */
+}
+
+  .content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .image {
+    background-image: url('/../../assets/images/logo1.png');
+    background-size: cover; /* or cover, depending on your needs */
+    background-repeat: no-repeat;
+    height: 120px; /* Adjust height as needed */
+    width: 180px; /* Adjust width as needed */
+    margin-right: 15px; /* Adjust margin as needed for spacing */
+  }
+  
+  .text {
+    flex: 1;
+  }
+  .redButton
+  {
+        background-color:rgba(255, 31, 31, 0.893);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+      
+  }
+  .redButton:hover {
+    background-color:  red;
+  }
+  button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes moveBackground {
+    from {
+      background-position: 0% 0%;
+    }
+    to {
+      background-position: 100% 0%;
+    }
+  }
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+    }
+  
+    to {
+      margin-left: 0%;
+    }
+  }
+  
+
+  

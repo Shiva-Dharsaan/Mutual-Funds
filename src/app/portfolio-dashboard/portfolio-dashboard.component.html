@@ -1,0 +1,184 @@
+
+   <style>
+     /*CSS*/
+     
+     * {
+         box-sizing: border-box;
+     }
+     .login-buttons {
+  margin-left: auto;
+  text-align: end;
+}
+.login-buttons a {
+  margin-left: 10px;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  background-color: rgb(67, 67, 67);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+.login-buttons a:hover {
+  background-color: #0c0c0c;
+}
+     .header {
+            color: #fff;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+     .tab {
+         float: left;
+         width: 10%;
+         padding-bottom: 5%;
+         padding-top: 2%;
+         padding-left: 2%;
+         margin: 0%; 
+         max-height: 200px;
+          height: 50%;
+     }
+     /* Style the buttons that are used to open the tab content */
+     .tab button {
+         display: block;
+         background-color: inherit;
+         
+         width: 100%;
+         border: none;
+         outline: none;
+         cursor: pointer;
+         transition: 0.3s;
+      }
+     .tab button:hover{
+         background-color: rgb(18, 84, 198);
+     }
+     .tabcontent {
+         float: left;
+         padding: 0px 12px;
+         border: 1px solid #ffffff;
+         padding-bottom: 15%;
+         width: 38%;
+         border-left: none;
+         height: 455px;
+         opacity: 0.7;
+         display:none;
+         text-align: center;
+         align-items:center;
+         background-color: rgb(255, 255, 255);
+     }
+     .tablinks{
+        padding-bottom: 0cm;
+        max-height: 100px;
+        height: 50%;
+     }
+     .sidebar{
+        background-color: rgb(13, 13, 13);
+        width:5%;
+        height: 80%;
+     }
+   </style>
+   <!-- Java script -->
+   <!-- <div>
+   <script>
+    function selectTab(tabIndex) {
+       // Declare all variables
+       var i, tabcontent;
+       // Get all elements with class="tabcontent" and hide them
+       tabcontent = document.getElementsByClassName("tabcontent");
+       for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+       }
+       //Show the Selected Tab
+       document.getElementById(tabIndex).style.display = "block";
+    }
+
+
+ </script> 
+ </div>-->
+ <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+<div style="background-image: url('/../../assets/images/pd.webp'); background-repeat: no-repeat; background-size: cover;height:700px">
+   <!--HTML Code -->
+   <div class="header">
+    <div class="header-text">
+       <h1>    
+        MUTUAL FUND
+       </h1>
+    </div>
+    <a href="index.html" class="home-icon" style="color: #000000; background-color: #fff; opacity: 0.9; padding-left: 1%; padding-top: 1%; padding-bottom: 1%; padding-right: 1%;">&#8962;</a>
+</div>
+  <div >
+  <div class="tab">
+   <div class="tablinks"  (click)="selectTab('tab1'); "  >
+      <img src="/../../assets/images/images.png" style="width: 50%; align-items: center;" > 
+   </div>
+   
+   <div class="tablinks" (click)="selectTab('tab2')" >
+    <img src="/../../assets/images/images.png" style="width: 50%; "> 
+   </div>
+   <div class="tablinks" (click)="selectTab('tab3')">
+    <div > <img src="/../../assets/images/images.png" style="width: 50%; ">  </div>
+   </div>
+   <div class="tablinks" (click)="selectTab('tab4')">
+    <div > <img src="/../../assets/images/images.png" style="width: 50%; ">  </div>
+   </div>
+   <div class="tablinks" (click)="selectTab('tab5')">
+    <div > <img src="/../../assets/images/images.png" style="width: 50%; ">  </div>
+   </div>
+   <div class="tablinks" (click)="selectTab('tab6')">
+    <div > <img src="/../../assets/images/images.png" style="width: 50%; ">  </div>
+   </div>
+
+  </div>
+  </div>
+   <div id="tab1" class="tabcontent" >
+      <img src="/../../assets/images/logo1.png" style=" opacity: 3;align-self: center; text-align: center; height: 290px; padding-top: 5%; width: 435px;" >
+      <h2 style="text-align: left; color: rgb(61, 61, 61);">Define MutualFund</h2>
+      <h4 style="text-align: left; opacity: o.3; color: rgb(95, 95, 95);">Create a new Mutual Fund by entering all the necessary information </h4>
+      <div class="login-buttons">
+        <a routerLink="/defineMf">Go</a>
+      </div>
+   </div> 
+   <div id="tab2" class="tabcontent">
+    <img src="/../../assets/images/logo2.jpg" style=" opacity: 3;align-self: center; text-align: center; height: 290px; padding-top: 5%; width: 435px;" >
+    <h2 style="text-align: left; color: rgb(61, 61, 61);">Stock Weightage</h2>
+    <h4 style="text-align: left; opacity: o.3; color: rgb(95, 95, 95);">Add one or many stocks to a Mutual Fund</h4>
+    <div class="login-buttons">
+      <a routerLink="/giveWeightage">Go</a>
+    </div>
+   </div> 
+   <div id="tab3" class="tabcontent"> 
+    <img src="/../../assets/images/logo3.webp" style=" opacity: 3;align-self: center; text-align: center; height: 290px; padding-top: 5%; width: 435px;" >
+    <h2 style="text-align: left; color: rgb(61, 61, 61);">Portfolio Position</h2>
+    <h4 style="text-align: left; opacity: o.3; color: rgb(95, 95, 95);">View Stocks brought by MutualFunds</h4>
+    <div class="login-buttons">
+      <a href="port-position.html">Go</a>
+    </div>
+   </div>
+   <div id="tab4" class="tabcontent">
+    <img src="/../../assets/images/stocks.webp" style=" opacity: 3;align-self: center; text-align: center; height: 290px; padding-top: 5%; width: 435px;" >
+    <h2 style="text-align: left; color: rgb(61, 61, 61);">Stock Details</h2>
+    <h4 style="text-align: left; opacity: o.3; color: rgb(95, 95, 95);">View Stocks and their performance</h4>
+    <div class="login-buttons">
+      <a routerLink="/seeStocks">Go</a>
+    </div>
+    </div>
+    <div id="tab5" class="tabcontent">
+      <img src="/../../assets/images/logo5.jpg" style=" opacity: 3;align-self: center; text-align: center; height: 290px; padding-top: 5%; width: 435px;" >
+      <h2 style="text-align: left; color: rgb(61, 61, 61);">Set Total Corpus</h2>
+      <h4 style="text-align: left; opacity: o.3; color: rgb(95, 95, 95);">Set Total Corpus of a any MutualFund</h4>
+      <div class="login-buttons">
+        <a href="tot-corpus.html">Go</a>
+      </div> 
+  </div>
+  <div id="tab6" class="tabcontent">
+    <img src="/../../assets/images/logo6.png" style=" opacity: 3;align-self: center; text-align: center; height: 290px; padding-top: 5%; width: 435px;" >
+    <h2 style="text-align: left; color: rgb(61, 61, 61);">Delete MutualFund</h2>
+    <div class="login-buttons">
+      <a href="tot-corpus.html">Go</a>
+    </div> 
+</div>  
+   </div>

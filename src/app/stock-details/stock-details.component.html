@@ -1,0 +1,18 @@
+<div class="header">
+    <h1>List of Stocks</h1>
+</div >
+<div class="container" id="container"><br><br>
+  <div class="one" *ngFor="let stock of stocks | async">
+    <div class="content" >
+      <p class="image" id="image"></p>
+      <div class="text">
+        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <b>{{ stock.nameofshare }}</b>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <b style="color: blue;">{{ stock.closing_price }}<b style="color: red;">&uarr;</b><b style="color:green;">&#x2193;</b></b>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button (click)="getStockDetail(stock.nameofshare)">StockDetails</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+  

@@ -1,0 +1,31 @@
+<div class="header">
+    <h1>Stock Details</h1>
+</div>
+<div class="container" id="container">
+  <table>
+    <thead>
+      <tr>
+        <th>Stock Name</th>
+        <th>Closing Price</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let stock of stocks |async">
+        <td>
+           <b> {{ stock.nameofshare }}</b>
+           <img src="/../../assets/images/graph2.png" style="height: 25px; width: 25px;">
+        </td>
+        <td>
+          <b>{{ stock.closing_price }}</b>
+          <span style="color: red;">&uarr;</span>
+          <span style="color: green;">&#x2193;</span>
+        </td>
+        <td>
+           <b>{{stock.closingdate}}</b>
+           <img src="/../../assets/images/date.png" style="height: 25px; width: 25px;">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

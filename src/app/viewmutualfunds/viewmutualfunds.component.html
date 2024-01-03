@@ -1,0 +1,19 @@
+<div class="header">
+    <h1>Mutual Funds</h1>
+</div >
+<div class="container" id="container"><br><br>
+  <div class="one" *ngFor="let nav of navs | async">
+    <div class="content" >
+      <p class="image" id="image"></p>
+      <div class="text">
+        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <b>{{ nav.mutualfund }}</b>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <b style="color: blue;">{{ nav.previous_day_nav | number:'1.2-3'  }}<b style="color: red;">&uarr;</b><b style="color:green;">&#x2193;</b></b>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button>Subscribe</button>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="redButton">Redeem</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+  
